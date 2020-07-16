@@ -34,8 +34,7 @@ end;
 function THomeController.Index: IActionResult;
 begin
   var arra := fmathservice.TestArrays;
-  Result := TJsonResult.Create(arra);
-  arra.Free;
+  Result := Json(arra);
 end;
 
 initialization
